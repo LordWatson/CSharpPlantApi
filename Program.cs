@@ -6,7 +6,6 @@
  * configures Services and Middleware etc
  *
  */
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -19,7 +18,6 @@ var builder = WebApplication.CreateBuilder(args);
 // services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 /*
  * think of connecting config/database.php in Laravel to your .env variables
@@ -69,8 +67,7 @@ var app = builder.Build();
 // middleware
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    //
 }
 
 app.UseHttpsRedirection();
