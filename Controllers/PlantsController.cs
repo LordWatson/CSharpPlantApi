@@ -95,23 +95,4 @@ namespace PlantAPI.Controllers
             return Ok(userPlant);
         }
     }
-
-    public class SearchPlantRequest
-    {
-        public string PlantName { get; set; } = string.Empty;
-    }
-
-    public class AddPlantRequest
-    {
-        public string Nickname { get; set; } = string.Empty;
-    }
-
-    public class UpdateUserPlantRequest
-    {
-        public string? PlantNickname { get; set; }
-        public string? HealthStatus { get; set; }
-        public DateTime? LastWatered { get; set; }
-        public DateTime? LastFertilized { get; set; }
-        public string? Notes { get; set; }
-    }
 }
